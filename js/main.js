@@ -119,23 +119,31 @@ function getQuoteObject(int) {
 
 function changeQuote() {
 
-  var quote   = document.getElementById("quote"),
-      author  = document.getElementById("author"),
-      quoteObject;
+  var quote       = document.getElementById("quote"),
+      author      = document.getElementById("author"),
+      tweetButton = document.getElementById("tweet-quote"),
+      quoteObject,
+      encodedQuote;
 
+  // Get a random quote, change the span elements to display new quote
   quoteObject         = getQuoteObject(getRandomInt());
   quote.textContent   = quoteObject.quote;
   author.textContent  = quoteObject.author;
 
+  // Edit the tweet anchor to use recently fetched quote
+  encodedQuote = encodeURIComponent(quoteObject.quote); // Make sure quote string is encoded HTML
+  tweetButton.href = "https://twitter.com/intent/tweet?hashtags=quotes&amp;text=\"" + encodedQuote + "\" -" + quoteObject.author + "";
+
 };
 
+// When all DOM Content is loaded (essentially when the page is loaded)
 document.addEventListener("DOMContentLoaded", function() {
   var button  = document.getElementById("quote-button");
 
   changeQuote();
 
+  // When the "click for random quote"-button is clicked
   button.addEventListener("click", function() {
-    console.log("klickad");
     changeQuote();
   });
 

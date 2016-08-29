@@ -10,19 +10,24 @@
   <link rel="shortcut icon" href="img/">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans+Condensed:300|Open+Sans:300" rel="stylesheet">
+  <script src="https://use.fontawesome.com/177715f34e.js"></script>
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <span id="title">QUOTE MACHINE</span>
-    <button id="quote-button">CLICK FOR RANDOM QUOTE</button>
+    <button title="Click for random quote" id="quote-button">CLICK FOR RANDOM QUOTE</button>
+    <a target="_blank" title="Tweet this quote" id="tweet-quote" href="https://twitter.com/intent/tweet?hashtags=quotes&amp;text=lorem">
+        <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+    </a>
   </header>
 
   <!-- Main -->
   <div id="main">
     <span id="quote-wrap">"<span id="quote"></span>"</span>
     <span id="author-wrap">- <span id="author"></span></span>
+
   </div>
 
 <!-- Footer -->

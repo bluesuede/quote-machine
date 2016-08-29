@@ -27,7 +27,7 @@ header {
   padding:0;
 
   display:flex;
-  flex-direction: column;
+  flex-wrap:wrap;
   align-items: center;
   justify-content: center;
 }
@@ -35,19 +35,20 @@ header {
 #title {
   font-size:32px;
   letter-spacing: 4px;
-  margin-bottom:5vh;
+  width:100%;
+  text-align: center;
 }
 
 #quote-button{
   max-width: 80%;
 
   font-family: 'Open Sans', sans-serif;
-  font-size:14px;
+  font-size:13px;
 
   border:1px solid #E63946;
   border-radius: 3px;
 
-  padding:10px 20px;
+  padding:10px 10px;
 
   color: #FFFFFF;
   background-color: #E63946;
@@ -63,6 +64,16 @@ header {
   cursor:pointer;
 }
 
+#tweet-quote {
+  margin-left: 3vh;
+  color:#1DA1F3;
+  align-self: center;
+}
+
+  #tweet-quote:hover {
+    color:#0484CE;
+  }
+
 #main {
   display:flex;
   align-items:center;
@@ -73,9 +84,10 @@ header {
 
 #quote-wrap {
   font-family: "Josefin Slab", serif;
-  font-size: 30px;
+  font-size: 25px;
   max-width: 80%;
   text-align: center;
+  max-width:672px;
 }
 
 #author-wrap {
